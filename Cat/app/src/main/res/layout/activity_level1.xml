@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".level1">
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#26FF0A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/box"
+        android:layout_width="320dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="24dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <com.example.cat.DragView1
+            android:id="@+id/button"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/orange"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.example.cat.Drag1_1
+            android:id="@+id/button1_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/square"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button" />
+
+        <com.example.cat.Drag1_1
+            android:id="@+id/button1_1_1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/square"
+            app:layout_constraintBottom_toTopOf="@+id/button1_1_3"
+            app:layout_constraintStart_toEndOf="@+id/button1_1_2" />
+
+        <com.example.cat.Drag1_1
+            android:id="@+id/button1_1_2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/square"
+            app:layout_constraintBottom_toTopOf="@+id/button1_1"
+            app:layout_constraintStart_toEndOf="@+id/button" />
+
+        <com.example.cat.Drag1_1
+            android:id="@+id/button1_1_3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/square"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/button1_1" />
+
+        <com.example.cat.Drag1_2
+            android:id="@+id/button1_2"
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:background="@drawable/long1"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.cat.Drag1_2
+            android:id="@+id/button1_2_1"
+            android:layout_width="80dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/longcat"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.example.cat.Drag2_1
+            android:id="@+id/button2_1"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="@drawable/heng2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.example.cat.Drag2_1
+            android:id="@+id/button2_1_1"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="@drawable/heng"
+            app:layout_constraintStart_toEndOf="@+id/button1_2_1"
+            app:layout_constraintTop_toBottomOf="@+id/button2_1_2" />
+
+        <com.example.cat.Drag2_1
+            android:id="@+id/button2_1_2"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:background="@drawable/heng"
+            app:layout_constraintStart_toEndOf="@+id/button2_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:enabled="false"
+        android:onClick="nextlevel"
+        android:text="下一关"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/box" />
+
+    <TextView
+        android:id="@+id/Score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintStart_toEndOf="@+id/button_next"
+        app:layout_constraintTop_toTopOf="@+id/button_next" />
+</android.support.constraint.ConstraintLayout>
